@@ -4,13 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
   "dependencies": {
-    "@angular-devkit/build-angular": "^15.2.4",
     "@angular/animations": "^15.0.0",
     "@angular/cli": "^15.2.4",
     "@angular/common": "^15.0.0",
