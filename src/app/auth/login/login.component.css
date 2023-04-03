@@ -1,0 +1,44 @@
+.table_container{
+    /* border: 1px solid; */
+    /* background-image: url('/assets/img/background-image.jpg'); */
+    background: aliceblue;
+
+    
+}
+.message{
+    display: block;
+}
+.table_data{
+    padding: 10px;
+}
+.table_btn{
+    display: grid;
+    padding: 15px;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    
+}
+h1{
+    text-align: center;
+}
+.links{
+    padding: 10px;
+}
+.link{
+    padding: 10px;
+    font-size: small;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+img{
+    height: 100px;
+    margin-left: 5px;
+}
+.glinks{
+    color: white;
+}

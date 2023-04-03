@@ -1,0 +1,39 @@
+
+<div class="container">
+    
+    <form class="table_container" [formGroup]="loginFormValues" (ngSubmit)="login()">
+         <!-- <img src="/assets/img/logo.png"> -->
+        <h1 class="table_data h1">Login </h1>
+        <table>
+            <tr>
+                <td class="table_data">Email</td>
+                <td class="table_data"><input type="email" formControlName="email" autofocus></td>
+                
+            </tr>
+            <p class="text-danger message"
+                        *ngIf="(isRequested || loginFormValues.controls.email.touched && loginFormValues.controls.email.errors)">
+                        Required</p>
+            <tr>
+                <td class="table_data"  >Password</td>
+                <td class="table_data"><input type="password" formControlName="password"></td>
+               
+            </tr>
+            <p class="text-danger message"
+            *ngIf="(isRequested || loginFormValues.controls.password.touched && loginFormValues.controls.password.errors)">
+            Required</p>
+        </table>
+
+        <a href="#" class="text-danger link" routerLink="/forgot">forgot password?</a>
+        <div class="table_btn">
+            <button type="submit" class="btn btn-success" (click)="login()">LOGIN</button>
+           
+        </div>
+        <div class="text-center">Or</div>
+        <div class="links text-center" >
+            <button type="submit" class="btn btn-primary" ><a class="glinks" routerLink="/category">Continue with Google</a></button>
+        </div>
+        <div class="links">
+            Don't have account? <span><a class="links" routerLink="/auth/register">Register now -></a></span>
+        </div>
+    </form>
+</div>

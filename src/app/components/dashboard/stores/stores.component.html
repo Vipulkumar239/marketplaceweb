@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div  class="col mt-4"  *ngFor="let p of storesArray; let i = index" >
+<img class="storeImage" [src]="p.image ? p.image:''" (click)="selectCard(p)"> 
+<div class="text"><p class="text1">{{ p.storeName }} <br>{{p.company}}</p>
+</div>
+
+        </div>
+    </div>
+</div>
+

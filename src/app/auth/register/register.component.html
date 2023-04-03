@@ -1,0 +1,76 @@
+
+<div class="container">
+
+    <form class="table_container"  [formGroup]="frmValue" (ngSubmit)="signup()">
+            <h4 class="table_data">Registration </h4>
+            <table> 
+                <tr>
+                    <td class="table_data">User Name</td>
+                    <td class="table_data"><input type="text" placeholder="User Name" control="name" formControlName="name" required
+                            autofocus>
+                        <small class="text-danger message"
+                            *ngIf="(isRequested || frmValue.controls.name.touched && frmValue.controls.name.errors)">
+                            Required</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_data">Email</td>
+                    <td class="table_data"><input type="email" placeholder="email" formControlName="email">
+                        <small class="text-danger message"
+                            *ngIf="(isRequested || frmValue.controls.email.touched && frmValue.controls.email.errors)">
+                            Required</small>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td class="table_data">Password</td>
+                    <td class="table_data"><input type="password" placeholder="password" formControlName="password">
+                        <small class="text-danger message"
+                            *ngIf="(isRequested || frmValue.controls.password.touched && frmValue.controls.password.errors)">
+                            Required</small>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td class="table_data">Phone No</td>
+                    <td class="table_data"><input type="mobile" placeholder="Phone No" formControlName="phoneno">
+                        <small class="text-danger message"
+                            *ngIf="(isRequested || frmValue.controls.phoneno.touched && frmValue.controls.phoneno.errors)">
+                            Required</small>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td class="table_data">Longitude</td>
+                <td class="table_data"><input type="tel" placeholder="Longitude" formControlName="longitude" value={{longitude}}>
+                        <!-- <small class="text-danger message"
+                            *ngIf="(isRequested || frmValue.controls.phoneno.touched && frmValue.controls.phoneno.errors?.required)">
+                            REquired</small> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_data">Latitude</td>
+                    <td class="table_data"><input type="tel" placeholder="Latitude" formControlName="latitude" value={{latitude}}>
+                        <!-- <small class="text-danger message"
+                            *ngIf="(isRequested || frmValue.controls.phoneno.touched && frmValue.controls.phoneno.errors?.required)">
+                            REquired</small> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_data">Deliver Address</td>
+                    <td class="table_data"><textarea type="text" placeholder="address" formControlName="address"></textarea>
+                        <small class="text-danger message"
+                            *ngIf="(isRequested || frmValue.controls.address.touched && frmValue.controls.address.errors)">
+                            Required</small>
+                    </td>
+                </tr>
+        
+            </table>
+            <div class="table_btn">
+                <button type="submit" class="btn btn-success ">Signup</button>
+            </div>
+            <div class="links">
+    Already have an account? <a routerLink="/auth/login">Log In</a>
+            </div>
+        </form>
+    </div>

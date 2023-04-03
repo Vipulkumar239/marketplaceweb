@@ -1,0 +1,54 @@
+<div class="shopping-cart">
+  <!-- Title -->
+  <!-- <div class="title">
+    Shopping Bag
+  </div> -->
+ 
+  <!-- Product #1 -->
+  <div class="item" *ngFor="let p of products; let i = index" >
+    {{i+1}})
+    <div class="buttons">
+      <span class="delete-btn"></span>
+      <span class="like-btn"></span>
+    </div>
+ 
+    <!-- <div class="image">
+      <img class="imgg" src="../../../assets/bball.jpg" alt="" />
+    </div> -->
+ 
+    <div class="description">
+      <span>{{p.name}}</span>
+      <!-- <span>Bball High</span>
+      <span>White</span> -->
+    </div>
+ 
+    <div class="quantity">
+      <button class="plus-btn" type="button" name="button" (click)="removeOrReduceCartItem(p)">
+        <img src="plus.svg" alt="" />
+      </button>
+      <input type="text" name="name" [value]="val">
+      <button class="minus-btn" type="button" name="button" (click)="addOrIncreaseCartItem(p)">
+        <img src="minus.svg" alt="" />
+      </button>
+    </div>
+ 
+    <div class="total-price">{{p.price |currency:"INR"}}</div>
+  </div>
+<!--  
+<div class="row prod">
+    <div class="col"*ngFor="let p of products;">
+  <ul class="heroes">
+    <li>
+      <button type="button" >
+        <span class="badge">{{p.name|uppercase}}</span>
+        <span class="name">{{p.price| currency : "INR"}}</span>
+         
+          <i class="fa-sharp fa-solid fa-plus"></i>
+      
+      </button>
+    
+    </li>
+  </ul>
+</div> -->
+<button type="submit" class="checkoutbutton" (click)="checkout()">Proceed</button>
+</div>

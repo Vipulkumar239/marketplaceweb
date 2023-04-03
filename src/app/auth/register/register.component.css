@@ -1,0 +1,25 @@
+.table_container{
+    /* border: 1px solid;
+    background-image: url('/assets/img/background-image.jpg'); */
+    background: aliceblue;
+}
+.table_data{
+    padding: 10px;
+}
+.table_btn{
+display: grid;
+    padding: 15px;
+
+}
+.message{
+    color: red;
+    display: block;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+.links{
+    padding: 10px;
+}
